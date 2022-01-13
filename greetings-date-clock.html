@@ -126,12 +126,17 @@ else{
     seconds+=" am"
 }
 hrs = today.getHours();
-if (hrs < 12)
+if (hrs < 4)
+        greet = 'Sleep Well, Eva  ';
+    else if (hrs >=4 && hrs <12)
         greet = 'Good Morning, Eva  ';
     else if (hrs >= 12 && hrs <= 17)
         greet = 'Good Afternoon, Eva ';
-    else if (hrs >= 17 && hrs <= 24)
+    else if (hrs >= 17 && hrs < 20)
         greet = 'Good Evening, Eva  ';
+    else if (hrs >=20 && hrs < 24)
+        greet = 'Good Night, Eva  ';
+
 // console.log(today.toLocaleTimeString());
 document.getElementById('greet').innerHTML = greet;
 document.getElementById('hour').innerHTML = hour;
